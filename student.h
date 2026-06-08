@@ -12,5 +12,6 @@ void searchStudent();
 void updateStudent();
 void deleteStudent();
 void saveToFile();
+void loadFromFile();
 
 #endif
