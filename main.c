@@ -25,7 +25,7 @@ int main() {
             case 3: updateStudent(); break;
             case 4: deleteStudent(); break;
             case 5: saveToFile(); break;
-            default: printf("Invalid choice.\n");
+            default: printf("Invalid choice.\n"); break;
         }
     } while(choice != 5);
 
