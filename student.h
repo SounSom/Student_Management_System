@@ -13,7 +13,7 @@ struct Student {
     char grade[5];
 };
 
-//Function declarations / prototypes
+// Function declarations / prototypes
 void addStudent(struct Student roster[], int *count); // add.c
 void searchStudent(struct Student roster[], int count); // search.c
 void updateStudent(struct Student roster[], int count); // update.c

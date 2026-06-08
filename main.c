@@ -4,6 +4,9 @@
 #define bold_on "\x1b[1m"
 #define bold_off "\x1b[0m"
 
+    // TO DO: Uncomment this after file_handler.c is finished
+    // loadFromFile(student_list, &student_count)
+
 int main() {
     struct Student student_list[max_student];   // Max number of students storage list (defined in student.h library)
     int student_count = 0;
