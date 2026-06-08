@@ -7,5 +7,10 @@ struct Student {
     char major[50];
     float gpa;
 };
+void addStudent();
+void searchStudent();
+void updateStudent();
+void deleteStudent();
+void saveToFile();
 
 #endif
