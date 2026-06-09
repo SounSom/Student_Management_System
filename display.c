@@ -22,7 +22,7 @@ void displayStudents(struct Student roster[], int count) {
         for (int j = 0; j < count; j++) {
             printf("%.2f ", roster[i].scores[j]);
         }
-        prinf("| Avg: %.2f | Grade: %s\n",
+        printf("| Avg: %.2f | Grade: %s\n",
             roster[i].average,
             roster[i].grade);
     }
