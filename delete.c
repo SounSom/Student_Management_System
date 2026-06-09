@@ -2,6 +2,9 @@
 #include <string.h>
 #include "student.h"
 
+#define bold_on "\x1b[1m"
+#define bold_off "\x1b[0m"
+
 //Function definition
 void deleteStudent(struct Student roster[], int *count) {
     if (*count == 0) {
@@ -13,13 +16,13 @@ void deleteStudent(struct Student roster[], int *count) {
     int found = -1;
 
     // Mini-menu for deletion options
-    printf("\nDelete Record By:\n");
+    printf(bold_on "\nDelete option:\n\n" bold_off);
     printf("1. Student ID\n");
-    printf("2. Student Name\n");
-    printf("Enter operation option (1-2): ");
+    printf("2. Student Name\n\n");
+    printf(bold_on "Enter operation option (1-2): " bold_off);
     
     if (scanf("%d", &mode) != 1) {      // Checks for number inputs only
-        printf("[ERROR] Invalid input.\n");
+        printf(bold_on "\nInvalid input!\n" bold_off);
         while (getchar() != '\n'); // clear buffer
         return;
     }
@@ -27,8 +30,9 @@ void deleteStudent(struct Student roster[], int *count) {
         // Delete by ID
     if (mode == 1) {
         int id_del;
-        printf("Enter Student ID: ");
+        printf("\nEnter Student ID: ");
         scanf("%d", &id_del);
+        while (getchar() != '\n'); // Clear buffer
 
         for (int i = 0; i < *count; i++) {
             if (roster[i].id == id_del) {   // Compare student IDs in database for valid ID for deletion
@@ -40,7 +44,7 @@ void deleteStudent(struct Student roster[], int *count) {
         // Delete by name
     else if (mode == 2) {
         char name_del[50];
-        printf("Enter Student Name: ");
+        printf("\nEnter Student Name: ");
         
         // clear buffer and begin loop for fgets
         while (getchar() != '\n');  
@@ -57,13 +61,14 @@ void deleteStudent(struct Student roster[], int *count) {
 
     // Invalid operation choice
     else {
-        printf("[ERROR] Invalid mode selected.\n");
+        while (getchar() != '\n'); // clear buffer
+        printf(bold_on "\nInvalid mode selected!\n" bold_off);
         return;
     }
 
     // No valid IDs / names found in database
     if (found == -1) {
-        printf("Record not found in the system registry.\n");
+        printf(bold_on "\nRecord not found in the system registry!\n" bold_off);
         return;
     }
 
@@ -74,5 +79,5 @@ void deleteStudent(struct Student roster[], int *count) {
 
     // Reduce current registered student counter by 1
     (*count)--;
-    printf("Successfully deleted record.\n");
+    printf(bold_on "\nSuccessfully deleted record!\n" bold_off);
 }

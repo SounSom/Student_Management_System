@@ -23,7 +23,7 @@ void saveToFile(struct Student roster[], int count) {
 
     // Close file using fclose
     fclose(fptr);
-    printf("Successfully saved %d record(s) to '%s'\n", count, database);
+    printf("\nSuccessfully saved %d record(s) to '%s'\n", count, database);
 }
 
 //  Load from file function definition
