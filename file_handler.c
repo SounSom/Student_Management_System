@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "student.h"
 
-#define database "student.dat"  //file name
+#define database "student.dat"  //file name for storage
 
 //  Save to file function definition
 void saveToFile(struct Student roster[], int count) {
