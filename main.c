@@ -54,7 +54,7 @@ int main() {
             switch(choice) {
                 case 1: //addStudent(student_list, &student_count); // Calls function from add.c
                     break;
-                case 2: //searchStudent(student_list, student_count); // Calls function from search.c
+                case 2: searchStudent(student_list, student_count); // Calls function from search.c
                     break;
                 case 3: //updateStudent(student_list, student_count); // Calls function from update.c
                     break;
