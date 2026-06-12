@@ -6,7 +6,7 @@
 //  Save to file function definition
 void saveToFile(struct Student roster[], int count) {
     
-    // Open file for writing in binary
+    // Open file for writing in binary and store in fptr
     FILE *fptr = fopen(database, "wb");
 
     // Check whether the file is corrupted / read-only
