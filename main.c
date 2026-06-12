@@ -10,10 +10,6 @@
     #define clear_screen() system("clear")  // Linux/Mac clear command
 #endif
 
-    /*  Bold characters  */
-#define bold_on "\x1b[1m"
-#define bold_off "\x1b[0m"
-
 int main() {
     struct Student student_list[max_student];   // Max number of students storage list (defined in student.h)
     int student_count = 0;

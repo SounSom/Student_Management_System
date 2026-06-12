@@ -6,7 +6,7 @@
 //  Save to file function definition
 void saveToFile(struct Student roster[], int count) {
     
-    // Open file for writing in binary with fopen
+    // Open file for writing in binary
     FILE *fptr = fopen(database, "wb");
 
     // Check whether the file is corrupted / read-only
@@ -21,7 +21,7 @@ void saveToFile(struct Student roster[], int count) {
     // Write all student records at once
     fwrite(roster, sizeof(struct Student), count, fptr);
 
-    // Close file using fclose
+    // Close file
     fclose(fptr);
     printf("\nSuccessfully saved %d record(s) to '%s'\n", count, database);
 }
@@ -29,7 +29,7 @@ void saveToFile(struct Student roster[], int count) {
 //  Load from file function definition
 void loadFromFile(struct Student roster[], int *count) {
 
-    // Open file for reading in binary with fopen
+    // Open file for reading in binary
     FILE *fptr = fopen(database, "rb");
 
     // Check whether the file is corrupted / read-only / doesn't exist (first run)
@@ -52,7 +52,7 @@ void loadFromFile(struct Student roster[], int *count) {
     fread(roster, sizeof(struct Student), file_count, fptr);
     *count = file_count;    // Update pointer count to file_count
 
-    // Close file with fclose
+    // Close file
     fclose(fptr);
     printf("Successfully loaded %d record(s) from '%s'!\n", file_count, database);
 }

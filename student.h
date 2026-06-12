@@ -1,6 +1,10 @@
 #ifndef Student_h
 #define Student_h
 
+    /*Bold characters*/
+#define bold_on "\x1b[1m"
+#define bold_off "\x1b[0m"
+
 #define max_student 100 // 100 Max structure for student list 
 #define num_subject 3 // Number of subjects
 
