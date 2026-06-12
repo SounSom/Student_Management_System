@@ -2,9 +2,6 @@
 #include <string.h>
 #include "student.h"
 
-#define bold_on "\x1b[1m"
-#define bold_off "\x1b[0m"
-
 //Function definition
 void deleteStudent(struct Student roster[], int *count) {
     if (*count == 0) {
