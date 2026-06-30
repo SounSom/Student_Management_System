@@ -86,7 +86,7 @@ Since Windows does not natively recognize Unix `make` commands, use the provided
 1. **Build the system:**
 Simply double-click `build.bat` in your file explorer, or run this in PowerShell:
     ```terminal
-    ./Build.bat
+    ./build.bat
     ```
 2. **Run the tool:**
     ```terminal
