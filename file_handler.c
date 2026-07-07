@@ -11,7 +11,7 @@ void saveToFile(struct Student roster[], int count) {
 
     // Check whether the file is corrupted / read-only
     if (fptr == NULL) {
-        printf("ERROR! Could not open file for writing!");
+        printf("ERROR! Could not open file for writing!\n");
         return;
     }
 
