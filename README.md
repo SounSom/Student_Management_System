@@ -12,7 +12,7 @@ A modular, file-bound CLI tool designed to manage student academic records throu
 
 # System Architecture
 
-The project utilizes a strict multi-file structure. `main.c` acts as the central router, delegating tasks to specific modules. All modules share a common data contract provided by the `student.h` header file.
+The project utilizes a multi-file structure where `main.c` acts as the central router, delegating tasks to specific modules. All modules share a common data contract provided by the `student.h` header file.
 
 ````markdown
 📁 student-management-system
@@ -65,15 +65,11 @@ Modular Design: Isolated logic prevents merge conflicts and allows for clean par
 
 # Quick Start
 
-As compiling multi-file C projects differs between operating systems, please navigate to the `student-management-system` directory and choose the build method that matches your environment.
+Any C compiler is supported for this project. Please navigate to the `student-management-system` directory and use the build methods we prepared that matches your environment OR you can compile the project yourself with your prefered compiler in the directory.
 
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="18" height="18" /> Linux / macOS
 
-Unix-based systems come configured for `make`. This tool reads the provided `Makefile` to instantly compile and link the entire project.
-
-
 1. **Build the system:**
-Simply run this in any bash/zsh terminal:
     ```bash
     make
     ```
@@ -84,10 +80,7 @@ Simply run this in any bash/zsh terminal:
 
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" width="18" height="18" /> Windows
 
-Since Windows does not natively recognize Unix `make` commands, use the provided Batch script to compile the project seamlessly.
-
 1. **Build the system:**
-Simply double-click `build.bat` in your file explorer, or run this in PowerShell:
     ```terminal
     ./build.bat
     ```

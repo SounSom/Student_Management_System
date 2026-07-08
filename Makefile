@@ -1,16 +1,27 @@
 # Name of your final executable
 TARGET = sms
 
-# Find all .c files in the folder
+# Find all C files in the folder
 SRCS = $(wildcard *.c)
 
-# The default rule when you type 'make'
+# Detect which compiler is available
+ifeq (, $(shell command -v gcc 2> /dev/null))
+    ifeq (, $(shell command -v clang 2> /dev/null))
+        $(error "no C compiler found")
+    else
+        CC = clang
+    endif
+else
+    CC = gcc
+endif
+
+# Default when you enter "make"
 all: $(TARGET)
 
-# Compile ALL .c files together into ONE program
+# Compile all C files together
 $(TARGET): $(SRCS)
-	gcc -Wall $(SRCS) -o $(TARGET)
+	$(CC) -Wall $(SRCS) -o $(TARGET)
 
-# Clean up rule (type 'make clean' to delete the app)
+# Clean up rule | 'make clean'
 clean:
 	rm -f $(TARGET)
