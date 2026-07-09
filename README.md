@@ -88,4 +88,3 @@ Any C compiler is supported for this project. Please navigate to the `student-ma
     ```terminal
     ./sms.exe
     ```
-# Cache Break
