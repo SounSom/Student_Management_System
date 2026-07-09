@@ -7,25 +7,25 @@ void displayStudents(struct Student roster[], int count) {
         return;
     }
 
-    printf("\n========== ALL STUDENT RECORDS ==========\n");
-    printf("%-4s %-20s %-10s %s\n", "ID", "Name", "Gender", "Grades (3 subjects)");
-    printf("------------------------------------------\n");
+    printf("\n=================================== ALL STUDENT RECORDS =============================================\n");
+    printf("%-12s %-22s %-10s %s\n", "ID", "Name", "Gender", "Grades (5 Subjects)");
+    printf("-----------------------------------------------------------------------------------------------------\n");
 
     for (int i = 0; i < count; i++) {
-        printf("%-4ld %-20s %-10s ",
+        printf("%-12ld %-22s %-10s ",
         roster[i].id,
         roster[i].name,
         roster[i].gender);
 
         // Print all 3 scores
         for (int j = 0; j < num_subject; j++) {
-            printf("%.2f ", roster[i].scores[j]);
+            printf("%-5.2f ", roster[i].scores[j]);
         }
-        printf("| Avg: %.2f | Grade: %s\n",
+        printf("| Avg: %-5.2f | Grade: %s\n",
             roster[i].average,
             roster[i].grade);
     }
 
-    printf("==========================================\n");
+    printf("=====================================================================================================\n");
     printf("Total Students: %d\n", count);
 }

@@ -6,7 +6,7 @@
 #define bold_off "\x1b[0m"
 
 #define max_student 100 // 100 Max structure for student list 
-#define num_subject 3 // Number of subjects
+#define num_subject 5 // Number of subjects
 
 struct Student {
     long id;

@@ -31,13 +31,29 @@ void addStudent(struct Student roster[], int *count) {
     // 3. Get Student Information
     while (getchar() != '\n'); // Clear buffer before fgets
 
-    printf(bold_on "Enter Student Name: " bold_off);
-    fgets(newStudent.name, sizeof(newStudent.name), stdin);
-    newStudent.name[strcspn(newStudent.name, "\n")] = '\0';
+    while (1) {
+        printf(bold_on "Enter Student Name: " bold_off);
+        fgets(newStudent.name, sizeof(newStudent.name), stdin);
+        newStudent.name[strcspn(newStudent.name, "\n")] = '\0';
 
-    printf(bold_on "Enter Gender (Male/Female/Other): " bold_off);
-    fgets(newStudent.gender, sizeof(newStudent.gender), stdin);
-    newStudent.gender[strcspn(newStudent.gender, "\n")] = '\0';
+        if (newStudent.name[0] != 0) {
+            break;
+        }
+        else {printf("Invalid! Name cannot be empty\n");
+        }
+    }
+
+    while (1) {
+        printf(bold_on "Enter Gender (Male/Female): " bold_off);
+        fgets(newStudent.gender, sizeof(newStudent.gender), stdin);
+        newStudent.gender[strcspn(newStudent.gender, "\n")] = '\0';
+        
+        if (newStudent.gender[0] != 0) {
+            break;
+        }
+        printf("Invalid! Gender cannot be empty\n");
+    }
+        
 
     // 4. Get and Validate Scores
     printf(bold_on "Enter scores for %d subjects:\n" bold_off, num_subject);
