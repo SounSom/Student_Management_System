@@ -65,7 +65,7 @@ Modular Design: Isolated logic prevents merge conflicts and allows for clean par
 
 # Quick Start
 
-Any C compiler is supported for this project. Please navigate to the `student-management-system` directory and use the build methods we prepared that matches your environment OR you can compile the project yourself with your prefered compiler in the directory.
+Any C compiler is supported for this project. Please navigate to the `student-management-system/` directory and use the build methods we prepared that matches your environment OR you can compile the project yourself with your prefered compiler in the `src/` directory.
 
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="18" height="18" /> Linux / macOS
 

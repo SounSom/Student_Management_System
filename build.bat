@@ -12,7 +12,7 @@ IF /I "%~1"=="clean" (
 where gcc >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     set CC=gcc
-    set CFLAGS=-Wall *.c -o sms.exe
+    set CFLAGS=-Wall src\*.c -o sms.exe
     goto :compile
 )
 
@@ -20,7 +20,7 @@ IF %ERRORLEVEL% EQU 0 (
 where clang >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     set CC=clang
-    set CFLAGS=-Wall *.c -o sms.exe
+    set CFLAGS=-Wall src\*.c -o sms.exe
     goto :compile
 )
 
@@ -28,7 +28,7 @@ IF %ERRORLEVEL% EQU 0 (
 where cl >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     set CC=cl
-    set CFLAGS=/W3 *.c /Fesms.exe
+    set CFLAGS=/W3 src\*.c /Fesms.exe
     goto :compile
 )
 

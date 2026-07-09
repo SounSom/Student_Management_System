@@ -2,7 +2,7 @@
 TARGET = sms
 
 # Find all C files in the folder
-SRCS = $(wildcard *.c)
+SRCS = $(wildcard src/*.c)
 
 # Detect which compiler is available
 ifeq (, $(shell command -v gcc 2> /dev/null))
