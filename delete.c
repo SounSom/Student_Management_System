@@ -26,9 +26,13 @@ void deleteStudent(struct Student roster[], int *count) {
 
         // Delete by ID
     if (mode == 1) {
-        int id_del;
+        long id_del;
         printf("\nEnter Student ID: ");
-        scanf("%d", &id_del);
+        if (scanf("%ld", &id_del) != 1) {
+            printf(bold_on "\nInvalid input!\n" bold_off);
+            while (getchar() != '\n');
+            return;
+        }
         while (getchar() != '\n'); // Clear buffer
 
         for (int i = 0; i < *count; i++) {

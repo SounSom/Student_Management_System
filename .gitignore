@@ -59,3 +59,5 @@ student.dat
 
 # Unix binary (from make)
 sms
+student_management
+student_management_test

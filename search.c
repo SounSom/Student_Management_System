@@ -41,10 +41,10 @@ void searchStudent(struct Student roster[], int count) {
 
 // Search by ID Function
 void searchById(struct Student roster[], int count) {
-    int id;
+    long id;
     printf(bold_on "\nEnter Student ID to search: " bold_off);
 
-    if (scanf("%d", &id) != 1) {
+    if (scanf("%ld", &id) != 1) {
         printf(bold_on "\nInvalid input.\n" bold_off);
         while (getchar() != '\n');
         return;
@@ -55,7 +55,7 @@ void searchById(struct Student roster[], int count) {
     for (int i = 0; i < count; i++) {
         if (roster[i].id == id) {
             printf(bold_on "\n=== STUDENT RECORD FOUND ===\n" bold_off);
-            printf("ID: %d\n", roster[i].id);
+            printf("ID: %ld\n", roster[i].id);
             printf("Name: %s\n", roster[i].name);
             printf("Gender: %s\n", roster[i].gender);
             printf("Scores: ");
@@ -70,7 +70,7 @@ void searchById(struct Student roster[], int count) {
     }
 
     if (!found) {
-        printf(bold_on "\nNo student found with ID %d.\n" bold_off, id);
+        printf(bold_on "\nNo student found with ID %ld.\n" bold_off, id);
     }
 }
 
@@ -85,7 +85,7 @@ void searchByName(struct Student roster[], int count) {
 
     for (int i = 0; i < count; i++) {
         if (strstr(roster[i].name, name) != NULL) {
-            printf("ID: %d | Name: %s | Gender: %s | Avg: %.2f | Grade: %s\n",
+            printf("ID: %ld | Name: %s | Gender: %s | Avg: %.2f | Grade: %s\n",
                    roster[i].id, roster[i].name, roster[i].gender,
                    roster[i].average, roster[i].grade);
             found = 1;

@@ -9,7 +9,7 @@
 #define num_subject 3 // Number of subjects
 
 struct Student {
-    int id;
+    long id;
     char name[50];
     char gender[10];
     float scores[num_subject];

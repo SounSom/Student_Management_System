@@ -12,7 +12,7 @@ void displayStudents(struct Student roster[], int count) {
     printf("------------------------------------------\n");
 
     for (int i = 0; i < count; i++) {
-        printf("%-4d %-20s %-10s ",
+        printf("%-4ld %-20s %-10s ",
         roster[i].id,
         roster[i].name,
         roster[i].gender);

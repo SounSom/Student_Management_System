@@ -13,10 +13,10 @@ void updateStudent(struct Student roster[], int count) {
         return;
     }
 
-    int id;
+    long id;
     printf(bold_on "\nEnter Student ID of record to update: " bold_off);
 
-    if (scanf("%d", &id) != 1) {
+    if (scanf("%ld", &id) != 1) {
         printf(bold_on "\nInvalid input.\n" bold_off);
         while (getchar() != '\n');
         return;
@@ -33,13 +33,13 @@ void updateStudent(struct Student roster[], int count) {
     }
 
     if (index == -1) {
-        printf(bold_on "\nNo student found with ID %d.\n" bold_off, id);
+        printf(bold_on "\nNo student found with ID %ld.\n" bold_off, id);
         return;
     }
 
     // Student found, now show what we have and what we can update
     printf(bold_on "\n=== CURRENT STUDENT INFORMATION ===\n" bold_off);
-    printf("ID: %d\n", roster[index].id);
+    printf("ID: %ld\n", roster[index].id);
     printf("Name: %s\n", roster[index].name);
     printf("Gender: %s\n", roster[index].gender);
     printf("Scores: ");
@@ -82,14 +82,14 @@ void updateStudent(struct Student roster[], int count) {
 // Update Name
 void updateName(struct Student roster[], int index) {
     printf(bold_on "Enter new name (current: %s): " bold_off, roster[index].name);
-    scanf(" %[^\n]%*c", roster[index].name);
+    scanf(" %49[^\n]%*c", roster[index].name);
     printf(bold_on "\nName updated successfully.\n" bold_off);
 }
 
 // Update Gender
 void updateGender(struct Student roster[], int index) {
     printf(bold_on "Enter new gender (current: %s): " bold_off, roster[index].gender);
-    scanf(" %[^\n]%*c", roster[index].gender);
+    scanf(" %9[^\n]%*c", roster[index].gender);
     printf(bold_on "\nGender updated successfully.\n" bold_off);
 }
 

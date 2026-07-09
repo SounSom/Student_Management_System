@@ -13,7 +13,7 @@ void addStudent(struct Student roster[], int *count) {
 
     // 2. Get and Validate Student ID
     printf(bold_on "\nEnter Student ID: " bold_off);
-    if (scanf("%d", &newStudent.id) != 1) {
+    if (scanf("%ld", &newStudent.id) != 1) {
         printf(bold_on "\nInvalid input for ID.\n" bold_off);
         while (getchar() != '\n');
         return;
@@ -22,7 +22,7 @@ void addStudent(struct Student roster[], int *count) {
     // Check for duplicate ID
     for (int i = 0; i < *count; i++) {
         if (roster[i].id == newStudent.id) {
-            printf(bold_on "\nError: Student with ID %d already exists.\n" bold_off, newStudent.id);
+            printf(bold_on "\nError: Student with ID %ld already exists.\n" bold_off, newStudent.id);
             while (getchar() != '\n');
             return;
         }
@@ -87,6 +87,6 @@ void addStudent(struct Student roster[], int *count) {
     (*count)++;
 
     printf(bold_on "\nStudent record added successfully!\n" bold_off);
-    printf("Student ID: %d\n", newStudent.id);
+    printf("Student ID: %ld\n", newStudent.id);
     printf("Name: %s\n", newStudent.name);
 }
